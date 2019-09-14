@@ -9,6 +9,7 @@ const gType = require('../models/GroupType');
 const product = require('../models/Product');
 const jwt = require('jsonwebtoken')
 const db = "mongodb://127.0.0.1:27017/inventory_2019";
+const db = "mongodb://milan1750:45680m@ds135427.mlab.com:35427/inventory"
 // mongoose.Promise = global.Promise;
 mongoose.connect(db, function(err){
     if(err){
