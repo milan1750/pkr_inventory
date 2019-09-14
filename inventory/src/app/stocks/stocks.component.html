@@ -1,0 +1,50 @@
+<div class="row mt-5">
+  <div class="col-md-4 mb-3" *ngFor="let event of events">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">{{event.name}}</h5>
+        <p class="card-text">{{event.description}}</p>
+        <a href="#" class="btn btn-primary">Buy Tickets</a>
+      </div>
+      <div class="card-footer text-muted">
+        {{event.date | date:'shortDate'}}
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Stocks</h5>
+        <p class="card-text">All the stock management activity. Curd operation with stocks, View stats, Reports</p>
+        <a href="#" class="btn btn-primary">View Stocks</a>
+      </div>
+      <div class="card-footer text-muted">
+          2019-09-09
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Transaction</h5>
+        <p class="card-text">All the transaction management activity. View stats, Account, Billing, Reports</p>
+        <a href="#" class="btn btn-primary">View Transaction</a>
+      </div>
+      <div class="card-footer text-muted">
+          2019-09-09
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 mb-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">Checkouts</h5>
+        <p class="card-text">All the transaction management activity with details. View stats, Reports</p>
+        <a href="#" class="btn btn-primary">View Transaction</a>
+      </div>
+      <div class="card-footer text-muted">
+          2019-09-09
+      </div>
+    </div>
+  </div>
+</div>

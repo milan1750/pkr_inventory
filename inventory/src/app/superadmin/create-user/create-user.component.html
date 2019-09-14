@@ -1,0 +1,79 @@
+
+<div class="row mt-5 register-user">
+  <div class="col-md-12 mb-3">
+    <div class="card text-center">
+      <div class="card-body" *ngIf="!userSet">
+        <h3 class="card-title" >Register a new User <i class="fa fa-user" style="color:green"></i></h3>
+        <!-- <p class="card-text text-danger">Please fill all the form before you procced.</p> -->
+        <form class="text-left ml-5 mr-5"  (submit)="registerUser(userForm)" #userForm="ngForm">
+          <div class="form-group">
+            <label for="" class="text">Company Name</label>
+            <input type="text" name = "companyName" class="form-control" [(ngModel)] = "user.companyName" required>
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Company Type</label>
+            <input class="form-control" name="companyType" [(ngModel)] = "user.companyType">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Company Location</label>
+            <input type="text" class="form-control" name = "companyLocation" [(ngModel)] = "user.companyLocation">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Company Contact</label>
+            <input type="text" class="form-control" name="companyContact" [(ngModel)] = "user.companyContact">
+          </div>
+          <div class="form-group">
+            <label for="" class="text" name="companyWebsite" >Comapny Website</label>
+            <input type="text" class="form-control" [(ngModel)] = "user.companyWebsite" name="companyWebsite">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Company Registration Number</label>
+            <input type="text" class="form-control" name="companyRegNumber"  [(ngModel)] = "user.companyRegNumber">
+          </div><div class="form-group">
+            <label for="" class="text" name="companyPanNumber" >Comapny Pan Number</label>
+            <input type="text" class="form-control" [(ngModel)] = "user.companyPanNumber" name="conpanyPanNumber">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Comapny Logo</label><br>
+            <input type="file"  placeholder="add new image file" name="companyLogo" >
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Comapny ESTD</label>
+            <input type="text" class="form-control" name="companyEstd" [(ngModel)] = "user.companyEstd">
+          </div>
+          <hr>
+          <h3>Focal Person Information</h3>
+          <div class="form-group">
+            <label for="" class="text">Focal Perseon Name</label>
+            <input type="text" class="form-control" name="companyFocalPersonName" [(ngModel)] = "user.companyFocalPersonName">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Focal Person Location</label>
+            <input type="text" class="form-control" name = "companyFocalPersonAddress" [(ngModel)] = "user.companyFocalPersonLocation">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Comapny Focal Person Contact</label>
+            <input type="text" class="form-control" name="companyFocalPersonContact" [(ngModel)] = "user.companyFocalPersoncontact">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Comapny Focal Person Email</label>
+            <input type="text" class="form-control" name =  "companyFocalPersonEmail" [(ngModel)] = "user.companyFocalPersonEmail">
+          </div>
+
+          <p class="text-center">
+            <button class="btn btn-success" type="submit" bame="saveuser">Register</button>
+          </p>
+        </form>
+      </div>
+      <div class="card-body" *ngIf="userSet">
+          <div class = 'col-sm-2 col-xs-4 text-center timer-loader'></div>
+          <p></p>
+          <p class="text-center text-muted" *ngIf="!errorMsg">Please wait while regestering the user. You will be redirected to the users page once new user is registered.</p>
+          <p class="text-center text-muted errorMsg while-color" *ngIf="errorMsg">{{ errorMsg }} <a (click)="userSet=false" href="#" class="pull-right red-text close-button-small"><i class="fa fa-close"></i></a></p>
+      </div>
+      <div class="card-footer text-muted ">
+          Contact us at <a href="http://www.sewarow.com" target="_blank">Sewarow Technology</a> for any inconvinient
+      </div>
+    </div>
+  </div>
+</div>

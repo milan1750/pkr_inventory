@@ -1,0 +1,19 @@
+input:focus,textarea:focus{
+  /* box-shadow: 0px;
+  border: 1px; */
+  /* transition: 0.3 ease; */
+}
+
+.big-size {
+  min-width: 120px;
+}
+.table.product-listing{
+  font-size: 13px;
+}
+
+.table.product-listing th,.table.product-listing td{
+  font-weight: normal;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle
+}

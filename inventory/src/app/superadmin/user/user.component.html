@@ -1,0 +1,135 @@
+<div class="row mt-5">
+  <div class="col-md-12 mb-3">
+    <div class="card text-center">
+      <div class="card-body">
+
+      </div>
+      <div class="card-body" *ngIf="loader.status">
+        <div class = 'col-sm-2 col-xs-4 text-center timer-loader'></div>
+        <p></p>
+        <p class="text-center text-muted" *ngIf="!errorMsg">{{ loader.message }}</p>
+        <!-- <div class="alert alert-primary" role="alert" *ngIf = "note">
+          {{ note }}
+        </div> -->
+      </div>
+
+      <div class="card-body">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card-body">
+                  <!-- <div class="well well-lg"><label>Company Name :</label> {{ user.companyFocalPersonEmail}}</div>
+                  <div class="well well-lg">Company Location :  {{ user.companyLocation}}</div>
+                  <div class="well well-lg">Company Website : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <div class="well well-lg">User Location : {{ user.companyFocalPersonLocation}}</div>
+                  <p class="text-left">Company  : {{ user.companyLocation}}</p>
+                  <p class="text-left"> Location : {{ user.companyFocalPersonLocation }}</p> -->
+                  <!-- <p class="text-left">Email : {{ user.companyFocalPersonEmail}}</p> -->
+                  <div class="well profile container">
+                        <p class="text-center ">
+                            <img src="https://image.flaticon.com/icons/png/128/149/149071.png" alt="" class="user-image img img-responsive">
+                          </p>
+                        <h2> {{ user.companyFocalPersonName }}</h2>
+                        <p><strong>Company Name: </strong> {{ user.companyName }} </p>
+                        <p> {{ user.companyLocation }}</p>
+                        <!-- <p><strong>Users: </strong>
+                            <span class="tags">html5</span>
+                            <span class="tags">css3</span>
+                            <span class="tags">jquery</span>
+                            <span class="tags">bootstrap3</span>
+                        </p> -->
+                      <div class="divider text-center">
+                      </div>
+                      <div class="row">
+                          <div class="col-md-4 emphasis">
+                                  <h2><strong>0</strong></h2>
+                                  <p><small>Account remaining Days</small></p>
+                                  <button class="btn btn-success btn-block" data-toggle="modal" data-target="#info"><span class="fa fa-plus-circle"></span> Activate Now</button>
+                                  <!-- <button class="btn btn-success btn-block"><span class="fa fa-plus-circle"></span> Deactivate Now</button> -->
+                          </div>
+                          <div class="col-md-4 emphasis">
+                                  <h2><strong>375</strong></h2>
+                                  <p><small>Available stocks</small></p>
+                                  <button class="btn btn-info btn-block" data-toggle="modal" data-target="#info"><span class="fa fa-shopping-basket"></span> Stocks </button>
+                          </div>
+
+                          <div class="col-md-4 emphasis">
+                                  <h2><strong>986</strong></h2>
+                                  <p><small>Transactions Completed</small></p>
+                                  <button class="btn btn-primary btn-block" data-toggle="modal" data-target="#info"><span class="fa fa-dollar"></span> Trasnsactions </button>
+
+                          </div>
+                        </div>
+                 </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <!-- <table class="table table-bodered table-striped product-listing" *ngIf="!loader">
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Company Name</th>
+            <th class="big-size">Company Location</th>
+            <th class="big-size">User Email</th>
+            <th>Activated/Deactivated Date</th>
+            <th>User Status</th>
+            <th>More Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users;let i=index">
+            <td>{{ i+1 }}</td>
+            <td>{{ user.companyName }}</td>
+            <td>{{ user.companyLocation }}</td>
+            <td>{{ user.companyFocalPersonName }}</td>
+            <td>{{ user.companyFocalPersonEmail }}</td>
+            <td *ngIf="user.status">Active</td>
+            <td *ngIf="!user.status">Deactive</td>
+            <td>
+                <a class="btn btn-xs btn-primary action-button" alt="View Detail" routerLink="/master/user/{{ user._id }}"><i class="fa fa-eye"></i></a>&nbsp;
+                <a class="btn btn-xs btn-danger action-button" routerLink="/master/user/{{ user._id }}"><i class="fa fa-remove"></i></a>&nbsp;
+                <a class="btn btn-xs btn-info action-button" routerLink="/master/user/{{ user._id }}"><i class="fa fa-bell"></i></a>
+              </td>
+            <td></td>
+          </tr>
+
+        </tbody>
+      </table> -->
+      <div class="card-footer text-muted">
+          Please contact at <a href="http://www.sewarow.com">Sewarow Technology</a> for any inconvinient
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="info" tabindex="-1" role="dialog" aria-labelledby="infoLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="infoLabel">Notification !</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+       <p>Sorry This module is not working at the moment</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <!-- <button type="button" class="btn btn-primary">Send message</button> -->
+      </div>
+    </div>
+  </div>
+</div>

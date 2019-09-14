@@ -1,0 +1,67 @@
+<div class="row mt-5">
+  <div class="col-md-12 mb-3">
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title" >Add new product to the inventory</h5>
+        <!-- <p class="card-text text-danger">Please fill all the form before you procced.</p> -->
+        <form action="" class="text-left ml-5 mr-5"  (submit)="saveProduct(productForm)" #productForm="ngForm">
+          <div class="form-group">
+            <label for="" class="text">Product Category </label>
+            <select name="category" id="" class="form-control" [(ngModel)] = "product.category">
+              <option *ngFor="let cType of categoryType;" value="{{ cType.categoryName }}" class="form-control">{{ cType.categoryName }} </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Product Group </label>
+            <select name="group" id="" class="form-control" [(ngModel)] = "product.group">
+              <option *ngFor="let gType of groupType;" value="{{ gType.groupName }}" class="form-control">{{ gType.groupName }} </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Product Model </label>
+            <select name="model" id="" class="form-control" [(ngModel)] = "product.model">
+              <option *ngFor="let mType of modelType;" value="{{ mType.modelNames }}" class="form-control">{{ mType.modelNames }} </option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Product ID</label>
+            <input type="text" name ="productId" class="form-control" name="symbol" [(ngModel)] = "product.productId">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Product Name</label>
+            <input type="text" class="form-control" name="productName" [(ngModel)] = "product.productName">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Product Decription</label>
+            <textarea class="form-control" row="6" name="productDescription" [(ngModel)] = "product.productDescription"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Measurement Unit</label>
+            <select name="measurementUnit" id="" class="form-control" [(ngModel)] = "product.measurementUnit">
+              <option *ngFor="let qType of quantityTypeData;" value="{{ qType.typeShortName }}" class="form-control">{{ qType.typeName}} </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="" class="text">Quantity</label>
+            <input type="text" class="form-control" name="productQuantity" [(ngModel)] = "product.productQuantity">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Cost Price Per Item</label>
+            <input type="text" class="form-control" name="price" [(ngModel)] = "product.productCostPrice" name = "productCostPrice">
+          </div>
+          <div class="form-group">
+            <label for="" class="text">Selling Price per Item (without VAT)</label>
+            <input type="text" class="form-control" [(ngModel)] = "product.productSellingPrice" name="productSellingPrice">
+          </div>
+          <p class="text-center">
+            <button class="btn btn-success" type="submit">Save Product</button>
+          </p>
+        </form>
+      </div>
+      <div class="card-footer text-muted">
+          Please contact at <a href="http://www.sewarow.com" target="_blank">Sewarow Technology</a> for any inconvinient
+      </div>
+    </div>
+  </div>
+</div>

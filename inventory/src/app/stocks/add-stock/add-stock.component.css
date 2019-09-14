@@ -1,0 +1,6 @@
+input:focus,textarea:focus{
+   box-shadow: none;
+   outline: none;
+  /* border: 1px; */
+  /* transition: 0.3 ease; */
+}
