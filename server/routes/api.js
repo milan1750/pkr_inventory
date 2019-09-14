@@ -140,7 +140,7 @@ router.post('/register', verifyToken, (req, res) => {
 
 router.post('/login', (req, res) => {
   let userData = req.body
-  User.findOne({email: userData.email}, (err, user) => {
+  User.findOne({username: userData.email}, (err, user) => {
     if (err) {
       console.log(err)    
     } else {
